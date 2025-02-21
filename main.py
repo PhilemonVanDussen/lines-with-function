@@ -19,6 +19,10 @@ def handle_events():
                 return False
     return True
 
+def draw_line(screen, line_color, start_point, end_point, width):
+    pygame.draw.line(screen, line_color, start_point, end_point, width,)
+
+
 def main():
     screen = init_game()
     clock = pygame.time.Clock() # Initalize the clock here
@@ -26,6 +30,37 @@ def main():
     while running:
         running = handle_events()
         screen.fill(config.GREEN) # Use color from config
+
+        width = 5
+        line_color = config.BLUE
+
+        start_pos1 = [400, 350]
+        end_pos1 = [225, 425]
+        
+        
+        start_pos2 = [400, 350]
+        end_pos2 = [225, 425]
+        
+        
+        start_pos3 = [400, 350]
+        end_pos3 = [225, 425]
+        
+
+        start_pos4 = [400, 350]
+        end_pos4 = [225, 425]
+        
+
+        start_pos5 = [400, 350]
+        end_pos5 = [225, 425]
+        
+
+        start_pos6 = [400, 350]
+        end_pos6 = [225, 425]
+        
+
+        draw_line(screen, line_color, start_pos1, end_pos1, width) 
+        
+        
         pygame.display.flip()
 
         # Limit the frame rate to the specified frames per second
